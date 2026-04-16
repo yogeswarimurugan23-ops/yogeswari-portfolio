@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yogeswari | Portfolio</title>
+<title>Yogeswari | AI Developer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,20 +18,21 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#020617,#020617);
+background:#020617;
 color:white;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:rgba(0,0,0,0.8);
+background:#020617;
 position:sticky;
 top:0;
 z-index:100;
+border-bottom:1px solid #1f2937;
 }
 
 nav ul{
@@ -48,25 +49,38 @@ text-decoration:none;
 /* HERO */
 
 .hero{
-height:90vh;
+height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
+align-items:center;
+justify-content:space-between;
 padding:0 10%;
 }
 
-.hero h1{
-font-size:52px;
+.hero-text h1{
+font-size:55px;
 }
 
-.hero span{
+.hero-text span{
 color:#38bdf8;
 }
 
-.hero p{
-margin-top:10px;
-opacity:.8;
+.typing{
+color:#38bdf8;
+font-weight:600;
 }
+
+.hero-img{
+width:280px;
+height:280px;
+border-radius:50%;
+background:linear-gradient(45deg,#38bdf8,#6366f1);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+}
+
+/* BUTTON */
 
 .btn{
 background:#38bdf8;
@@ -78,19 +92,12 @@ text-decoration:none;
 margin-top:15px;
 margin-right:10px;
 font-weight:600;
-border:none;
-cursor:pointer;
 }
 
 /* SECTION */
 
 section{
 padding:80px 10%;
-}
-
-h2{
-margin-bottom:25px;
-font-size:32px;
 }
 
 .grid{
@@ -112,6 +119,8 @@ transform:translateY(-10px);
 border-color:#38bdf8;
 }
 
+/* SKILLS */
+
 .skill{
 text-align:center;
 padding:20px;
@@ -132,7 +141,11 @@ color:white;
 border-radius:8px;
 }
 
-/* animation */
+footer{
+text-align:center;
+padding:30px;
+opacity:.7;
+}
 
 .fade{
 opacity:0;
@@ -145,12 +158,6 @@ opacity:1;
 transform:translateY(0);
 }
 
-footer{
-text-align:center;
-padding:30px;
-opacity:.7;
-}
-
 </style>
 </head>
 
@@ -160,17 +167,19 @@ opacity:.7;
 <h3>Yogeswari</h3>
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#certificates">Certificates</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <div class="hero">
+
+<div class="hero-text">
 <h1>Hi, I'm <span>Yogeswari</span></h1>
+
+<h3 class="typing"></h3>
+
 <p>B.Tech IT Student | AI & Web Developer</p>
 
 <a href="Yogeswari_Resume_Final.pdf" download class="btn">Download Resume</a>
@@ -178,30 +187,23 @@ opacity:.7;
 
 </div>
 
-<section id="about" class="fade">
-<h2>About Me</h2>
-
-<div class="card">
-I am a B.Tech Information Technology student at IFET College of Engineering.
-I am interested in Artificial Intelligence and Web Development.
-I build smart automation projects and AI applications.
+<div class="hero-img">
+Your Photo
 </div>
 
-</section>
+</div>
 
 <section id="skills" class="fade">
 <h2>Skills</h2>
 
 <div class="grid">
-
-<div class="skill">🐍 Python</div>
-<div class="skill">🌐 HTML</div>
-<div class="skill">🎨 CSS</div>
-<div class="skill">🤖 AI</div>
-<div class="skill">💻 Web Dev</div>
-<div class="skill">⚙️ Automation</div>
-
+<div class="skill">Python</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">AI</div>
+<div class="skill">Web Dev</div>
 </div>
+
 </section>
 
 <section id="projects" class="fade">
@@ -210,47 +212,9 @@ I build smart automation projects and AI applications.
 <div class="grid">
 
 <div class="card">
-<h3>AI Smart Fabric Ironing System</h3>
-<p>
-AI-based system to detect fabric type and prevent overheating damage 
-using smart automation.
-</p>
+<h3>AI Smart Fabric Ironing</h3>
+<p>AI based automation system to prevent fabric damage</p>
 </div>
-
-</div>
-</section>
-
-<section id="education" class="fade">
-<h2>Education</h2>
-
-<div class="grid">
-
-<div class="card">
-B.Tech Information Technology<br>
-IFET College of Engineering
-</div>
-
-<div class="card">
-12th - Presidency HSS (ELITE)<br>
-80%
-</div>
-
-<div class="card">
-10th - Sri Ramachandra Vidhyalaya<br>
-85%
-</div>
-
-</div>
-</section>
-
-<section id="certificates" class="fade">
-<h2>Certificates</h2>
-
-<div class="grid">
-
-<div class="card">AI Workshop Participation</div>
-<div class="card">Web Development Learning</div>
-<div class="card">Project Presentation</div>
 
 </div>
 
@@ -265,15 +229,13 @@ IFET College of Engineering
 
 <input type="email" name="email" placeholder="Your Email" required>
 
-<textarea name="message" rows="5" placeholder="Message" required></textarea>
+<textarea name="message" rows="4" placeholder="Message"></textarea>
 
 <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_subject" value="New Portfolio Message">
 
 <br><br>
 
-<button type="submit" class="btn">Send Message</button>
+<button class="btn">Send</button>
 
 </form>
 
@@ -285,14 +247,54 @@ IFET College of Engineering
 
 <script>
 
-const faders = document.querySelectorAll('.fade');
+/* typing */
 
-window.addEventListener('scroll', () => {
-faders.forEach(el => {
-const top = el.getBoundingClientRect().top;
+const text=["AI Developer","Full Stack Learner","Python Programmer"];
+let i=0;
+let j=0;
+let current="";
+let isDeleting=false;
 
-if(top < window.innerHeight - 100){
-el.classList.add('show');
+function type(){
+current=text[i];
+
+if(isDeleting){
+j--;
+}else{
+j++;
+}
+
+document.querySelector(".typing").textContent=current.substring(0,j);
+
+if(!isDeleting && j==current.length){
+isDeleting=true;
+setTimeout(type,1000);
+return;
+}
+
+if(isDeleting && j==0){
+isDeleting=false;
+i++;
+if(i==text.length){
+i=0;
+}
+}
+
+setTimeout(type,100);
+}
+
+type();
+
+/* scroll animation */
+
+const faders=document.querySelectorAll(".fade");
+
+window.addEventListener("scroll",()=>{
+faders.forEach(el=>{
+const top=el.getBoundingClientRect().top;
+
+if(top < window.innerHeight-100){
+el.classList.add("show");
 }
 });
 });
