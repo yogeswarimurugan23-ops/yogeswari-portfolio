@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yogeswari | AI Developer</title>
+<title>Yogeswari | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -18,21 +18,20 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#020617;
+background:linear-gradient(135deg,#020617,#020617,#020617);
 color:white;
 }
 
-/* NAV */
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
 padding:20px 10%;
-background:#020617;
+background:rgba(0,0,0,0.8);
 position:sticky;
 top:0;
 z-index:100;
-border-bottom:1px solid #1f2937;
 }
 
 nav ul{
@@ -49,18 +48,18 @@ text-decoration:none;
 /* HERO */
 
 .hero{
-height:100vh;
+height:90vh;
 display:flex;
-align-items:center;
-justify-content:space-between;
+flex-direction:column;
+justify-content:center;
 padding:0 10%;
 }
 
-.hero-text h1{
-font-size:55px;
+.hero h1{
+font-size:52px;
 }
 
-.hero-text span{
+.hero span{
 color:#38bdf8;
 }
 
@@ -69,18 +68,10 @@ color:#38bdf8;
 font-weight:600;
 }
 
-.hero-img{
-width:280px;
-height:280px;
-border-radius:50%;
-background:linear-gradient(45deg,#38bdf8,#6366f1);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
+.hero p{
+margin-top:10px;
+opacity:.8;
 }
-
-/* BUTTON */
 
 .btn{
 background:#38bdf8;
@@ -92,12 +83,19 @@ text-decoration:none;
 margin-top:15px;
 margin-right:10px;
 font-weight:600;
+border:none;
+cursor:pointer;
 }
 
 /* SECTION */
 
 section{
 padding:80px 10%;
+}
+
+h2{
+margin-bottom:25px;
+font-size:32px;
 }
 
 .grid{
@@ -119,8 +117,6 @@ transform:translateY(-10px);
 border-color:#38bdf8;
 }
 
-/* SKILLS */
-
 .skill{
 text-align:center;
 padding:20px;
@@ -141,11 +137,7 @@ color:white;
 border-radius:8px;
 }
 
-footer{
-text-align:center;
-padding:30px;
-opacity:.7;
-}
+/* animation */
 
 .fade{
 opacity:0;
@@ -158,6 +150,12 @@ opacity:1;
 transform:translateY(0);
 }
 
+footer{
+text-align:center;
+padding:30px;
+opacity:.7;
+}
+
 </style>
 </head>
 
@@ -167,19 +165,17 @@ transform:translateY(0);
 <h3>Yogeswari</h3>
 <ul>
 <li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
 <div class="hero">
-
-<div class="hero-text">
 <h1>Hi, I'm <span>Yogeswari</span></h1>
-
 <h3 class="typing"></h3>
-
 <p>B.Tech IT Student | AI & Web Developer</p>
 
 <a href="Yogeswari_Resume_Final.pdf" download class="btn">Download Resume</a>
@@ -187,23 +183,30 @@ transform:translateY(0);
 
 </div>
 
-<div class="hero-img">
-Your Photo
+<section id="about" class="fade">
+<h2>About Me</h2>
+
+<div class="card">
+I am a B.Tech Information Technology student at IFET College of Engineering.
+I am interested in Artificial Intelligence and Web Development.
+I build smart automation projects and AI applications.
 </div>
 
-</div>
+</section>
 
 <section id="skills" class="fade">
 <h2>Skills</h2>
 
 <div class="grid">
-<div class="skill">Python</div>
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">AI</div>
-<div class="skill">Web Dev</div>
-</div>
 
+<div class="skill">🐍 Python</div>
+<div class="skill">🌐 HTML</div>
+<div class="skill">🎨 CSS</div>
+<div class="skill">🤖 AI</div>
+<div class="skill">💻 Web Dev</div>
+<div class="skill">⚙️ Automation</div>
+
+</div>
 </section>
 
 <section id="projects" class="fade">
@@ -212,12 +215,40 @@ Your Photo
 <div class="grid">
 
 <div class="card">
-<h3>AI Smart Fabric Ironing</h3>
-<p>AI based automation system to prevent fabric damage</p>
+<h3>AI Smart Fabric Ironing System</h3>
+<p>
+AI-based system to detect fabric type and prevent overheating damage 
+using smart automation.
+</p>
 </div>
 
 </div>
+</section>
 
+<section id="education" class="fade">
+<h2>Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>B.Tech Information Technology</h3>
+<p>IFET College of Engineering</p>
+<p>Status: Pursuing</p>
+</div>
+
+<div class="card">
+<h3>Higher Secondary (12th)</h3>
+<p>Presidency Higher Secondary School (ELITE)</p>
+<p>State Board – 80%</p>
+</div>
+
+<div class="card">
+<h3>SSLC (10th)</h3>
+<p>Sri Ramachandra Vidhyalaya High School</p>
+<p>State Board – 85%</p>
+</div>
+
+</div>
 </section>
 
 <section id="contact" class="fade">
@@ -229,13 +260,13 @@ Your Photo
 
 <input type="email" name="email" placeholder="Your Email" required>
 
-<textarea name="message" rows="4" placeholder="Message"></textarea>
+<textarea name="message" rows="5" placeholder="Message" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
 
 <br><br>
 
-<button class="btn">Send</button>
+<button type="submit" class="btn">Send Message</button>
 
 </form>
 
@@ -247,7 +278,7 @@ Your Photo
 
 <script>
 
-/* typing */
+/* typing animation */
 
 const text=["AI Developer","Full Stack Learner","Python Programmer"];
 let i=0;
@@ -287,14 +318,14 @@ type();
 
 /* scroll animation */
 
-const faders=document.querySelectorAll(".fade");
+const faders = document.querySelectorAll('.fade');
 
-window.addEventListener("scroll",()=>{
-faders.forEach(el=>{
-const top=el.getBoundingClientRect().top;
+window.addEventListener('scroll', () => {
+faders.forEach(el => {
+const top = el.getBoundingClientRect().top;
 
-if(top < window.innerHeight-100){
-el.classList.add("show");
+if(top < window.innerHeight - 100){
+el.classList.add('show');
 }
 });
 });
